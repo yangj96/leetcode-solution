@@ -65,7 +65,7 @@ public:
             if (j != i && nums[i] + nums[j] == target) {
                 auto it = hash.find(nums[i]);
                 res.push_back(hash.find(nums[i])->second);
-                hash.erase(it);
+                hash.erase(it); // erase (nums[i], i) to find j in multimap when nums[i] == nums[j] 
                 res.push_back(hash[nums[j]]);
                 return res;
             }
