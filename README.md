@@ -8,6 +8,6 @@
 | # | Title | Solution | Note | Time | Space |
 |---| ----- | -------- | --- | --------------- | ---------------- |
 |1| Two Sum | [C++](./1.two-sum.cpp) | hash <br> two pointer | O(n) <br> O(nlgn) | O(n) <br> O(n)|
-|10| Regular Expression Matching | [C++](./10.regular-expression-matching.cpp) | backtrace <br> [x] dp |<img src="https://latex.codecogs.com/gif.latex?O((T&plus;P)2^{T&space;&plus;&space;\frac{P}{2}})" title="O((T+P)2^{T + \frac{P}{2}})" /> | O((T+P)2^{T + \frac{P}{2}}) |
+|10| Regular Expression Matching | [C++](./10.regular-expression-matching.cpp) | backtrace <br> [x] dp |<img src="https://latex.codecogs.com/gif.latex?O((T&plus;P)2^{T&space;&plus;&space;\frac{P}{2}})" title="O((T+P)2^{T + \frac{P}{2}})" /> | <img src="https://latex.codecogs.com/gif.latex?O((T&plus;P)2^{T&space;&plus;&space;\frac{P}{2}})" title="O((T+P)2^{T + \frac{P}{2}})" /> |
 |15| 3 Sum | [C++](./15.3-sum.cpp) | three pointer | O(n^2) | O(1) |
 |17| Letter Combinations of a Phone Number | [C++](./17.letter-combinations-of-a-phone-number.cpp) | backtrace | O(3^N * 4^M) |  O(3^N * 4^M) |
