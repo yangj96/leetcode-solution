@@ -70,7 +70,7 @@
 class Solution {
 public:
     string minWindow(string s, string t) {
-        unordered_map<char, int> hash, window;
+        unordered_map<char, int> hash;
         for (auto &c : t) {
             hash[c]++;
         }

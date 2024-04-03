@@ -88,6 +88,7 @@ public:
         vector<vector<int>> dp(n, vector<int>(n, 0));
         int mlen = 0;
         // dp[i][j] = dp[i+1][j-1] if s[i] == s[j]
+        // dp[i][i] 和 dp[i][i+1] & s[i] == s[i+1]需要初始化为1
         for (int i = n - 1; i >= 0; i--) {
             for (int j = i; j < n; j++) {
                 if (s[i] == s[j] && (j - i <= 1 || dp[i+1][j-1] == 1)) {
