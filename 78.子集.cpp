@@ -49,7 +49,7 @@
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
-
+        int n = nums.size();
     }
 };
 // @lc code=end

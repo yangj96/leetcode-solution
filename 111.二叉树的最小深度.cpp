@@ -75,11 +75,11 @@ public:
             return;
         } 
         depth++;
-        dfs(root->left);
-        dfs(root->right);
         if (root->left == NULL && root->right == NULL) {
             res = min(res, depth);
         } 
+        dfs(root->left);
+        dfs(root->right);
         depth--;
     } 
 };

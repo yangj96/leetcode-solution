@@ -71,6 +71,9 @@
 class Solution {
 public:
     vector<TreeNode*> findDuplicateSubtrees(TreeNode* root) {
+        vector<TreeNode*> res;
+        if (!root) return res;
+        
 
     }
 };
