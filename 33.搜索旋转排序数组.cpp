@@ -64,7 +64,30 @@ class Solution {
 public:
     int search(vector<int>& nums, int target) {
         int n = nums.size();
-        
+        // 二分查找大于等于a[0]的最后一个值
+        int x = nums[0];
+        int l = 0, r = n - 1;
+        while (l < r) {
+            int mid = l + r  + 1 >> 1;
+            if (nums[mid] >= x) {
+                l = mid;
+            } else {
+                r = mid - 1;
+            }
+        }
+        if (target >= nums[0]) {
+            l = 0;
+        } else {
+            l = r + 1;
+            r = n - 1;
+        }
+        while (l < r) {
+            int mid = l + r >> 1;
+            if (nums[mid] >= target) r = mid;
+            else l = mid + 1;
+        }
+        if (nums[r] == target) return r;
+        return -1;
     }
 };
 // @lc code=end
