@@ -56,8 +56,17 @@ class Solution {
 public:
 
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
-        int n = 
-
+        int m = matrix.size();
+        if (!m) return false;
+        int n = matrix[0].size();
+        int l = 0, r = m * n - 1;
+        while (l < r) {
+            int mid = l + r >> 1, mid_x = mid / n, mid_y = mid % n;
+            if (matrix[mid_x][mid_y] >= target) r = mid;
+            else l = mid + 1;
+        }
+        if (matrix[l / n][l % n] == target) return true;
+        return false;
     }
 };
 // @lc code=end

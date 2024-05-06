@@ -63,9 +63,31 @@
 class Solution {
 public:
     ListNode* swapPairs(ListNode* head) {
-        ListNode* dummy = new ListNode();
-        
-
+        ListNode* dummy = new ListNode(0);
+        dummy->next = head;
+        // if (head == NULL || head->next == NULL) return head;
+        // ListNode* pre = dummy;
+        // ListNode*cur = pre->next;
+        // while (pre && cur) {
+        //     ListNode* nxt = cur->next;
+        //     if (nxt == NULL) break;
+        //     pre->next = nxt;
+        //     ListNode* tmp = nxt->next;
+        //     nxt->next = cur;
+        //     // 注意三个指针的next都需要修改
+        //     cur->next = tmp;
+        //     pre = cur;
+        //     cur = tmp;
+        // }
+        ListNode* pre = dummy;
+        while (pre->next && pre->next->next) {
+            auto a = pre->next, b = a->next;
+            pre->next = b;
+            a->next = b->next;
+            b->next = a;
+            pre = a;
+        }
+        return dummy->next;
     }
 };
 // @lc code=end

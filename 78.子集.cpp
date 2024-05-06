@@ -49,7 +49,19 @@
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
-        int n = nums.size();
+        vector<int> path;
+        vector<vector<int>> res;
+        dfs(nums, path, res, 0);
+        return res;
+    }
+
+    void dfs(vector<int>& nums, vector<int>& path, vector<vector<int>>& res, int st) {
+        res.push_back(path);
+        for (int i = st; i < nums.size(); i++) {
+            path.push_back(nums[i]);
+            dfs(nums, path, res, i + 1);
+            path.pop_back();
+        }
     }
 };
 // @lc code=end
